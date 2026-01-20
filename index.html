@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Strength</h1>
+        <p style="text-align:center; color:#666; margin-bottom:20px;">Check how strong your password is</p>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Type your password here">
+            <button class="show-btn" id="showBtn">Show</button>
+        </div>
+
+        <div class="strength-box">
+            <div class="strength-header">
+                <div class="strength-label">Password Strength:</div>
+                <div id="strength">Strong</div>
+            </div>
+
+            <div class="score" id="score">4/5</div>
+            <p style="text-align:center; color:#777; font-size:14px;">Criteria met</p>
+
+            <ul class="criteria">
+                <li>
+                    <div class="icon valid" id="lenIcon">✓</div>
+                    <span>At least 8 characters</span>
+                </li>
+                <li>
+                    <div class="icon valid" id="upperIcon">✓</div>
+                    <span>Contains uppercase letter</span>
+                </li>
+                <li>
+                    <div class="icon valid" id="lowerIcon">✓</div>
+                    <span>Contains lowercase letter</span>
+                </li>
+                <li>
+                    <div class="icon valid" id="numIcon">✓</div>
+                    <span>Contains number</span>
+                </li>
+                <li>
+                    <div class="icon invalid" id="symbolIcon">✗</div>
+                    <span>Contains symbol</span>
+                </li>
+            </ul>
+        </div>
+
+        <p class="info">Try adding a symbol (!@#$% etc.) to make it stronger</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
